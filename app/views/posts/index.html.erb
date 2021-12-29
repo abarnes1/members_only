@@ -1,1 +1,12 @@
-Posts Index Page
+<h1>Posts Index Page</h1>
+
+<% if user_signed_in? %>
+<div>
+  user signed in
+</div>
+<% else %>
+  user not signed in
+<% end %>
+<br />
+<br />
+<%= render @posts %>
