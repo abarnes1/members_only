@@ -35,3 +35,11 @@ message {
   background: #dfd;
 }
 
+textarea {
+  width: auto;
+  resize: none;
+}
+
+.error {
+  color: red;
+}

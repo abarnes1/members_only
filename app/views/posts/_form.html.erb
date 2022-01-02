@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col c12">
+    <%= form_with model: @post do |form| %>
+      <%= form.label :message %>
+      <%= form.text_area :message, rows: 10, cols: 80 %>
+
+      <%= form.submit "Submit", class: "btn btn-a btn-sm" %>
+    <% end %>  
+  </div>
+</div>
+

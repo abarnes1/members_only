@@ -1,1 +1,7 @@
-Posts New Page
+<h2>New Post - <%= current_user.username %></h2>
+
+<% @post.errors.full_messages.each do |error| %>
+  <div class="error"><%= error %></div>
+<% end %>
+
+<%= render "form" %>
