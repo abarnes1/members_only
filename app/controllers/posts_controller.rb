@@ -14,9 +14,7 @@ class PostsController < ApplicationController
 
     if @post.save
       redirect_to root_path
-      puts 'yo'
     else
-      puts 'not saved'
       render :new
     end
   end
