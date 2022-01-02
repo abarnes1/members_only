@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+
+@import 'entireframework.min.css';
+
+//add message colors
+message {
+  display: block;
+  padding: 2em;
+  background: #def;
+  border-left: 5px solid #44e;
+}
+
+.warning {
+  border-color: #e44; 
+  background: #fdd;
+}
+
+.great {
+  border-color: #2d2;
+  background: #dfd;
+}
+

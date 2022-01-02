@@ -11,17 +11,32 @@
   </head>
 
   <body>
+		<nav class="nav" tabindex="-1" onclick="this.focus()">
+			<div class="container">
+				<a class="pagename current" href="#">Members Only</a>
+
+				<a href="#">Create Post</a>
+        
+        <% if user_signed_in? %>
+          <%= link_to 'Log Out', destroy_user_session_path, method: "delete" %>
+        <% else %>
+          <%= link_to 'Log In', new_user_session_path %>
+        <% end %>
+			</div>
+		</nav>
+
+    <% if flash[:notice] %>
+      <div class="msg great"><%= notice %></div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="msg warning"><%= alert %></div>
+    <% end %>
+
+    <!--
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-    <% if user_signed_in? %>
-    <div>
-      Menu: <%= link_to 'Logout', destroy_user_session_path, method: "delete" %>
-    </div>
-    <% else %>
-
-    <% end %>
-    
+    -->
 
     <%= yield %>
   </body>
