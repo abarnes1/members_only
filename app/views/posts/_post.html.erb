@@ -1,11 +1,15 @@
-
+<div>
+  <%= post.message %>
+</div>
 
 <% if user_signed_in? %>
   <div>
-    <%= post.message %> (logged in)
-  </div>
-<% else%>
-  <div>
-    <%= post.message %> (not logged in)
+    By: <%= post.user.username %>
   </div>
 <% end %>
+
+<div>
+  <%= format_server_time(post.created_at) %>
+</div>
+<%= tag.hr unless post_iteration.last? %>
+<br />

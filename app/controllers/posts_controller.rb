@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
+  include ApplicationHelper
+
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
   end
 
   def new
