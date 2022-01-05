@@ -11,5 +11,13 @@
 <div>
   <%= format_server_time(post.created_at) %>
 </div>
+
+<% if current_user.try(:admin?) %>
+  <div> 
+    <%#= link_to 'Delete', destroy_post_path %>
+    delete
+  </div>
+<% end %>
+
 <%= tag.hr unless post_iteration.last? %>
 <br />
