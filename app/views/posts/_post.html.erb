@@ -14,8 +14,7 @@
 
 <% if current_user.try(:admin?) %>
   <div> 
-    <%#= link_to 'Delete', destroy_post_path %>
-    delete
+    <%= link_to 'Delete', post, method: :delete, data: { confirm: "Are you sure?" } %>
   </div>
 <% end %>
 
