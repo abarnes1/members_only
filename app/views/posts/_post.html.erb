@@ -1,21 +1,21 @@
-<div>
-  <%= post.message %>
-</div>
+<div class="post">
+  <div>
+    <%= post.message %>
+  </div>
 
-<% if user_signed_in? %>
+  <% if user_signed_in? %>
+    <div class="smaller">
+      By: <%= post.user.username %>
+    </div>
+  <% end %>
+
   <div class="smaller">
-    By: <%= post.user.username %>
+    <%= format_server_time(post.created_at) %>
   </div>
-<% end %>
 
-<div class="smaller">
-  <%= format_server_time(post.created_at) %>
+  <% if current_user.try(:admin?) %>
+    <div class="smaller"> 
+      <%= link_to 'Delete', post, method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+  <% end %>
 </div>
-
-<% if current_user.try(:admin?) %>
-  <div class="smaller"> 
-    <%= link_to 'Delete', post, method: :delete, data: { confirm: "Are you sure?" } %>
-  </div>
-<% end %>
-
-<%= tag.hr unless post_iteration.last? %>
