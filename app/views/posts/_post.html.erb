@@ -3,20 +3,19 @@
 </div>
 
 <% if user_signed_in? %>
-  <div>
+  <div class="smaller">
     By: <%= post.user.username %>
   </div>
 <% end %>
 
-<div>
+<div class="smaller">
   <%= format_server_time(post.created_at) %>
 </div>
 
 <% if current_user.try(:admin?) %>
-  <div> 
+  <div class="smaller"> 
     <%= link_to 'Delete', post, method: :delete, data: { confirm: "Are you sure?" } %>
   </div>
 <% end %>
 
 <%= tag.hr unless post_iteration.last? %>
-<br />

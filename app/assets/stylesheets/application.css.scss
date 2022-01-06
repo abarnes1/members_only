@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
 @import 'entireframework.min.css';
 
 //add message colors
@@ -42,4 +41,8 @@ textarea {
 
 .error {
   color: red;
+}
+
+.smaller {
+  font-size: 0.9em;
 }
