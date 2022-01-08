@@ -1,24 +1,24 @@
-# README
+# Members Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+[Members Only](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/members-only) is a project created in Rails for  [The Odin Project](https://www.theodinproject.com).  Its focus is to implement an authentication system with the Devise gem.
 
-* Ruby version
+Users can post publicly viewable messages, however, the author will not be visible unless viewed by a user that has logged in.
 
-* System dependencies
+[Click here](https://immense-mountain-69395.herokuapp.com/) to view a live version of the site.
 
-* Configuration
+## Skills Learned
+  - [Devise](https://github.com/heartcombo/devise) authentication
+  - Setting up PostgreSQL for development environment
+  - Using a basic CSS framework - [Min](http://mincss.com/)
 
-* Database creation
+## Reinforced Skills
+  - Familiarity with Rails project structure
+    - Routes
+    - Models
+    - Views
+    - Controller
+  - Basic ActiveRecord associations
+  - Heroku deployment
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
