@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# The admin password is updated in production after deployment.
 admin = User.new(name: 'Administrator', email: 'admin@membersonly.com',
                  username: 'Administrator', password: 'admin123', admin: true)
 
