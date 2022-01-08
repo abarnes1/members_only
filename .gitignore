@@ -39,4 +39,6 @@
 yarn-debug.log*
 .yarn-integrity
 
-todo.txt
+# Backup credential for changed admin login
+heroku_admin_account.txt
+
